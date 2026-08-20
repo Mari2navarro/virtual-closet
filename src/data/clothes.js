@@ -25,7 +25,7 @@
 }
 
 {
-  id: 2,
+  id: 3,
   name: "Pantalones Vaqueros",
   category: "bottom",
   color: "blue",
@@ -55,7 +55,7 @@
   name: "Falda midi marrón",
   category: "bottom",
   color: "brown",
-  style: ["casual", "minimal", "urban", "elegant", "urban", "romantic"],
+  style: ["casual", "minimal", "elegant", "urban", "romantic"],
   season: "all",
   occasion: ["work", "casual", "dinner", "date", "event"],
   formality: 4,
@@ -77,35 +77,35 @@
 }
 
 {
-  id: 8,
+  id: 7,
   name: "Chaqueta americana Beige",
-  category: "outwear",
+  category: "outerwear",
   color: "beige",
   style: ["casual", "minimal", "urban", "elegant", "romantic"],
   season: "winter",
   occasion: ["work", "casual", "dinner", "date", "event"],
-  formality: 6,
+  formality: 4,
   image: "/images/beige_blazer.jpg",
   favorite: false
 }
 
 {
-  id: 9,
+  id: 8,
   name: "Zapatillas blancas",
   category: "shoes",
   color: "white",
   style: ["casual", "minimal", "urban", "romantic"],
   season: "all",
-  occasion: ["work", "casual", "dinner", "date", "event", "party"],
+  occasion: ["work", "casual", "date"],
   formality: 1,
   image: "/images/white_sneakers.jpg",
   favorite: false
 }
 
 {
-  id: 10,
+  id: 9,
   name: "Bolso marrón",
-  category: "accesory",
+  category: "accessory",
   color: "brown",
   style: ["casual", "minimal", "urban", "elegant", "romantic"],
   season: "all",
