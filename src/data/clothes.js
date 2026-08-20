@@ -77,14 +77,40 @@
 }
 
 {
-  id: 7,
-  name: "Top negro básico",
-  category: "top",
-  color: "black",
-  style: ["casual", "minimal", "urban"],
-  season: "all",
+  id: 8,
+  name: "Chaqueta americana Beige",
+  category: "outwear",
+  color: "beige",
+  style: ["casual", "minimal", "urban", "elegant", "romantic"],
+  season: "winter",
   occasion: ["work", "casual", "dinner", "date", "event"],
+  formality: 6,
+  image: "/images/beige_blazer.jpg",
+  favorite: false
+}
+
+{
+  id: 9,
+  name: "Zapatillas blancas",
+  category: "shoes",
+  color: "white",
+  style: ["casual", "minimal", "urban", "romantic"],
+  season: "all",
+  occasion: ["work", "casual", "dinner", "date", "event", "party"],
   formality: 1,
-  image: "/images/black-basic-top.jpg",
+  image: "/images/white_sneakers.jpg",
+  favorite: false
+}
+
+{
+  id: 10,
+  name: "Bolso marrón",
+  category: "accesory",
+  color: "brown",
+  style: ["casual", "minimal", "urban", "elegant", "romantic"],
+  season: "all",
+  occasion: ["work", "casual", "dinner", "date", "event", "party"],
+  formality: 2,
+  image: "/images/brown_shoulder_bag.jpg",
   favorite: false
 }
