@@ -1,10 +1,5 @@
-$color-background: #f7f4f0;
-$color-surface: #ffffff;
-$color-text: #242222;
-$color-text-secondary: #817c78;
-$color-primary: #d98fa3;
-$color-primary-dark: #9e526b;
-$color-border: #e5e0db;
+@use "./variables" as *;
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&family=DM+Serif+Display:ital@0;1&display=swap");
 
 * {
   box-sizing: border-box;
@@ -14,5 +9,11 @@ body {
   margin: 0;
   background-color: $color-background;
   color: $color-text;
-  font-family: Arial, sans-serif;
+  font-family: "DM Sans", sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "DM Serif Display", serif;
 }

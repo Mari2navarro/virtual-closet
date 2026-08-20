@@ -1,0 +1,48 @@
+@use "../../styles/variables" as *;
+
+.clothing-card {
+  background-color: $color-surface;
+  padding: 1rem;
+
+  &__image-container {
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__image {
+    display: block;
+    width: 100%;
+    aspect-ratio: 3 / 4;
+    object-fit: cover;
+  }
+
+  &__favorite {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2.5rem;
+    height: 2.5rem;
+    border: 0;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: $color-text;
+    font-size: 1.25rem;
+    cursor: pointer;
+  }
+
+  &__info {
+    padding-top: 0.75rem;
+
+    h3 {
+      margin: 0;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+
+    p {
+      margin: 0.25rem 0 0;
+      color: $color-text-secondary;
+      font-size: 0.875rem;
+    }
+  }
+}
