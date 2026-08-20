@@ -1,0 +1,18 @@
+$color-background: #f7f4f0;
+$color-surface: #ffffff;
+$color-text: #242222;
+$color-text-secondary: #817c78;
+$color-primary: #d98fa3;
+$color-primary-dark: #9e526b;
+$color-border: #e5e0db;
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background-color: $color-background;
+  color: $color-text;
+  font-family: Arial, sans-serif;
+}
