@@ -1,13 +1,12 @@
-import { clothes } from "./data/clothes";
-import ClothingCard from "./components/clothing_card/clothing-card";
+import Sidebar from "./components/sidebar/sidebar";
+import Wardrobe from "./pages/wardrobe/wardrobe";
 
 function App() {
   return (
-    <main>
-      <h1>Mi armario 🎀</h1>
-
-      <ClothingCard clothing={clothes[0]} />
-    </main>
+    <>
+      <Sidebar />
+      <Wardrobe />
+    </>
   );
 }
 

@@ -10,13 +10,17 @@ function ClothingCard({ clothing }) {
           alt={clothing.name}
         />
 
-        <button className="clothing-card__favorite" type="button">
+        <button
+          className="clothing-card__favorite"
+          type="button"
+          aria-label={`Añadir ${clothing.name} a favoritos`}
+        >
           ♡
         </button>
       </div>
 
       <div className="clothing-card__info">
-        <h3>{clothing.name}</h3>
+        <h2>{clothing.name}</h2>
         <p>{clothing.category}</p>
       </div>
     </article>

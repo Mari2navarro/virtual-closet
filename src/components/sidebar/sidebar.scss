@@ -1,0 +1,102 @@
+@use "../../styles/variables" as *;
+
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+
+  width: 220px;
+  height: 100vh;
+
+  border-right: 1px solid $color-border;
+  background-color: $color-surface;
+
+  &__logo {
+    position: relative;
+
+    display: flex;
+    flex-direction: column;
+
+    padding: 2rem 1.5rem;
+
+    color: $color-text;
+
+    font-size: 1.7rem;
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: -0.06em;
+  }
+
+  &__logo-star {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+
+    color: $color-mustard;
+    font-size: 2rem;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+
+    margin-top: 2rem;
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+
+    padding: 1rem 1.5rem;
+
+    border-left: 4px solid transparent;
+
+    color: $color-text;
+    text-decoration: none;
+
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+
+    transition:
+      background-color 0.2s ease,
+      border-color 0.2s ease;
+
+    &:hover {
+      background-color: $color-background;
+    }
+
+    &--active {
+      border-left-color: $color-olive;
+      background-color: $color-olive;
+      color: $color-surface;
+    }
+  }
+
+  &__icon {
+    width: 1.5rem;
+
+    font-size: 1.3rem;
+    text-align: center;
+  }
+
+  &__sticker {
+    width: 130px;
+    margin: auto 1.5rem 2rem;
+    padding: 1rem;
+
+    background-color: $color-mustard;
+    color: $color-text;
+
+    transform: rotate(-3deg);
+
+    font-size: 0.85rem;
+    line-height: 1;
+  }
+}
