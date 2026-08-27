@@ -1,6 +1,6 @@
 import "./sidebar.scss";
 
-function Sidebar() {
+function Sidebar({ showFavorites, setShowFavorites }) {
   return (
     <aside className="sidebar">
       <div className="sidebar__logo">
@@ -10,15 +10,27 @@ function Sidebar() {
       </div>
 
       <nav className="sidebar__nav">
-        <a href="#" className="sidebar__link sidebar__link--active">
+       <button
+  type="button"
+  className={`sidebar__link ${
+    !showFavorites ? "sidebar__link--active" : ""
+  }`}
+  onClick={() => setShowFavorites(false)}
+>
           <span className="sidebar__icon">♧</span>
           <span>Mi armario</span>
-        </a>
+      </button>
 
-        <a href="#" className="sidebar__link">
-          <span className="sidebar__icon">♡</span>
-          <span>Favoritos</span>
-        </a>
+       <button
+  type="button"
+  className={`sidebar__link ${
+    showFavorites ? "sidebar__link--active" : ""
+  }`}
+  onClick={() => setShowFavorites(true)}
+>
+  <span className="sidebar__icon">♡</span>
+  <span>Favoritos</span>
+</button>
 
         <a href="#" className="sidebar__link">
           <span className="sidebar__icon">♧</span>

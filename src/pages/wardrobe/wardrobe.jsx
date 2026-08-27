@@ -3,11 +3,12 @@ import { clothes } from "../../data/clothes";
 import ClothingGrid from "../../components/clothing_grid/clothing-grid";
 import "./wardrobe.scss";
 
-function Wardrobe() {
+function Wardrobe({ showFavorites }) {
   // State
   const [clothesList, setClothesList] = useState(clothes);
   const [searchTerm, setSearchTerm] = useState("");
   const [selectedCategory, setSelectedCategory] = useState("all");
+ 
 
   // Categories
   const categories = [
@@ -31,17 +32,21 @@ function Wardrobe() {
   };
 
   // Filter clothes
-  const filteredClothes = clothesList.filter((clothing) => {
-    const matchesSearch = clothing.name
-      .toLowerCase()
-      .includes(searchTerm.toLowerCase());
+const filteredClothes = clothesList.filter((clothing) => {
+  const matchesSearch = clothing.name
+    .toLowerCase()
+    .includes(searchTerm.toLowerCase());
 
-    const matchesCategory =
-      selectedCategory === "all" ||
-      clothing.category === selectedCategory;
+  const matchesCategory =
+    selectedCategory === "all" ||
+    clothing.category === selectedCategory;
 
-    return matchesSearch && matchesCategory;
-  });
+  return matchesSearch && matchesCategory;
+});
+
+const displayedClothes = showFavorites
+  ? filteredClothes.filter((clothing) => clothing.favorite)
+  : filteredClothes;
 
   // Toggle favorite
   const handleToggleFavorite = (id) => {
@@ -107,9 +112,9 @@ function Wardrobe() {
       </nav>
 
       <ClothingGrid
-        clothes={filteredClothes}
-        onToggleFavorite={handleToggleFavorite}
-      />
+  clothes={displayedClothes}
+  onToggleFavorite={handleToggleFavorite}
+/>
     </main>
   );
 }
