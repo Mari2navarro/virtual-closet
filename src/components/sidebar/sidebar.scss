@@ -35,7 +35,7 @@
     top: 1.5rem;
     right: 1.5rem;
 
-    color: $color-mustard;
+    color: $color-butter;
     font-size: 2rem;
   }
 
@@ -73,8 +73,8 @@
     }
 
     &--active {
-      border-left-color: $color-olive;
-      background-color: $color-olive;
+      border-left-color: $color-forest;
+      background-color: $color-forest;
       color: $color-surface;
     }
   }
@@ -91,7 +91,7 @@
     margin: auto 1.5rem 2rem;
     padding: 1rem;
 
-    background-color: $color-mustard;
+    background-color: $color-butter;
     color: $color-text;
 
     transform: rotate(-3deg);
