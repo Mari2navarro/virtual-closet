@@ -1,6 +1,6 @@
 import "./clothing-card.scss";
 
-function ClothingCard({ clothing }) {
+function ClothingCard({ clothing, onToggleFavorite }) {
   return (
     <article className="clothing-card">
       <div className="clothing-card__image-container">
@@ -10,13 +10,14 @@ function ClothingCard({ clothing }) {
           alt={clothing.name}
         />
 
-        <button
-          className="clothing-card__favorite"
-          type="button"
-          aria-label={`Añadir ${clothing.name} a favoritos`}
-        >
-          ♡
-        </button>
+      <button
+  className="clothing-card__favorite"
+  type="button"
+  aria-label={`Añadir ${clothing.name} a favoritos`}
+  onClick={() => onToggleFavorite(clothing.id)}
+>
+  {clothing.favorite ? "♥" : "♡"}
+</button>
       </div>
 
       <div className="clothing-card__info">
