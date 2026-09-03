@@ -1,65 +1,69 @@
+import {
+  CalendarDays,
+  Heart,
+  House,
+  Plus,
+  Shirt,
+  UserRound,
+} from "lucide-react";
+
 import "./sidebar.scss";
 
 function Sidebar({ showFavorites, setShowFavorites }) {
   return (
     <aside className="sidebar">
-      <div className="sidebar__logo">
-        <span>VIRTUAL</span>
-        <span>CLOSET</span>
-        <span className="sidebar__logo-star">✳</span>
-      </div>
+      <nav className="sidebar__nav" aria-label="Navegación principal">
+        <button
+          className="sidebar__link sidebar__link--active"
+          type="button"
+          aria-label="Inicio"
+        >
+          <House className="sidebar__icon" />
+        </button>
 
-      <nav className="sidebar__nav">
-       <button
-  type="button"
-  className={`sidebar__link ${
-    !showFavorites ? "sidebar__link--active" : ""
-  }`}
-  onClick={() => setShowFavorites(false)}
->
-          <span className="sidebar__icon">♧</span>
-          <span>Mi armario</span>
-      </button>
+        <button
+          className="sidebar__link"
+          type="button"
+          aria-label="Armario"
+        >
+          <Shirt className="sidebar__icon" />
+        </button>
 
-       <button
-  type="button"
-  className={`sidebar__link ${
-    showFavorites ? "sidebar__link--active" : ""
-  }`}
-  onClick={() => setShowFavorites(true)}
->
-  <span className="sidebar__icon">♡</span>
-  <span>Favoritos</span>
-</button>
+        <button
+          className={`sidebar__link ${
+            showFavorites ? "sidebar__link--active" : ""
+          }`}
+          type="button"
+          aria-label="Favoritos"
+          onClick={() => setShowFavorites(!showFavorites)}
+        >
+          <Heart className="sidebar__icon" />
+        </button>
 
-        <a href="#" className="sidebar__link">
-          <span className="sidebar__icon">♧</span>
-          <span>Looks</span>
-        </a>
+        <button
+          className="sidebar__add"
+          type="button"
+          aria-label="Añadir prenda"
+        >
+          <Plus />
+        </button>
 
-        <a href="#" className="sidebar__link">
-          <span className="sidebar__icon">▣</span>
-          <span>Calendario</span>
-        </a>
+        <button
+          className="sidebar__link"
+          type="button"
+          aria-label="Calendario"
+        >
+          <CalendarDays className="sidebar__icon" />
+        </button>
 
-        <a href="#" className="sidebar__link">
-          <span className="sidebar__icon">▥</span>
-          <span>Estadísticas</span>
-        </a>
-
-        <a href="#" className="sidebar__link">
-          <span className="sidebar__icon">⚙</span>
-          <span>Ajustes</span>
-        </a>
+        <button
+          className="sidebar__link"
+          type="button"
+          aria-label="Perfil"
+        >
+          <UserRound className="sidebar__icon" />
+        </button>
       </nav>
-
-      <div className="sidebar__sticker">
-        <strong>WEAR</strong>
-        <strong>WHAT</strong>
-        <strong>MAKES</strong>
-        <strong>YOU</strong>
-        <strong>HAPPY</strong>
-      </div>
     </aside>
   );
 }

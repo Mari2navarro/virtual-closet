@@ -1,0 +1,86 @@
+@use "../../styles/variables" as *;
+
+.category-filters {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+
+  max-width: 1400px;
+  margin: 0 auto 2.5rem;
+  padding: 0;
+
+  &__button {
+    padding: 0.65rem 1.25rem;
+
+    border: 1.5px solid $color-forest;
+    border-radius: 999px;
+
+    background-color: transparent;
+    color: $color-forest;
+
+    font-family: inherit;
+    font-size: 0.82rem;
+    font-weight: 500;
+    line-height: 1;
+    letter-spacing: 0.01em;
+
+    cursor: pointer;
+
+    transition:
+      background-color 0.2s ease,
+      color 0.2s ease,
+      transform 0.2s ease;
+
+    &:hover {
+      background-color: $color-tea-green;
+      color: $color-forest;
+      transform: translateY(-2px);
+    }
+
+    &--active {
+      border-color: $color-forest;
+      background-color: $color-forest;
+      color: $color-surface;
+    }
+
+    &:focus-visible {
+      outline: 3px solid $color-pink;
+      outline-offset: 3px;
+    }
+  }
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+  .category-filters {
+    margin-bottom: 2rem;
+  }
+}
+
+/* MÓVIL */
+
+@media (max-width: 600px) {
+  .category-filters {
+    flex-wrap: nowrap;
+    overflow-x: auto;
+
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
+
+    &__button {
+      flex-shrink: 0;
+
+      padding: 0.6rem 1rem;
+
+      font-size: 0.78rem;
+    }
+  }
+}

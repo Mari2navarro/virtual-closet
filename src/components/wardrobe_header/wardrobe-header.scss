@@ -1,0 +1,414 @@
+@use "../../styles/variables" as *;
+
+.wardrobe-header {
+  position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
+
+  // -------------------------
+  // TOPBAR
+  // -------------------------
+
+  &__topbar {
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 1rem 0;
+  }
+
+  &__brand {
+    display: flex;
+    flex-direction: column;
+
+    color: $color-forest;
+    font-size: 0.75rem;
+    font-weight: 800;
+    line-height: 0.85;
+    letter-spacing: 0.14em;
+  }
+
+  &__actions {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  &__search {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+
+    width: 230px;
+    padding: 0.7rem 1rem;
+
+    border: 1px solid $color-border;
+    border-radius: 999px;
+
+    background-color: $color-surface;
+
+    box-shadow: 0 4px 12px rgba(23, 23, 23, 0.08);
+
+    span {
+      color: $color-forest;
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    input {
+      width: 100%;
+
+      border: none;
+      outline: none;
+
+      background: transparent;
+      color: $color-text;
+
+      font-family: inherit;
+      font-size: 0.8rem;
+
+      &::placeholder {
+        color: $color-text-secondary;
+      }
+    }
+  }
+
+  &__add {
+    display: grid;
+    place-items: center;
+
+    width: 46px;
+    height: 46px;
+
+    border: none;
+    border-radius: 50%;
+
+    background-color: $color-pink;
+    color: $color-surface;
+
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1;
+
+    cursor: pointer;
+
+    transition:
+      transform 0.2s ease,
+      background-color 0.2s ease;
+
+    &:hover {
+      background-color: $color-bubblegum;
+      transform: rotate(8deg) scale(1.05);
+    }
+  }
+
+  // -------------------------
+  // HERO
+  // -------------------------
+
+  &__hero {
+    position: relative;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    min-height: 390px;
+    margin-top: 1rem;
+  }
+
+  &__hero-content {
+    position: relative;
+    z-index: 4;
+  }
+
+  &__greeting {
+    margin: 0;
+
+    color: $color-forest;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(3.5rem, 7vw, 6.5rem);
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.07em;
+  }
+
+  &__title {
+    position: relative;
+
+    margin: 0.15rem 0 0;
+
+    color: $color-forest;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(4.5rem, 9vw, 8.5rem);
+    font-style: italic;
+    font-weight: 700;
+    line-height: 0.85;
+    letter-spacing: -0.08em;
+
+    span {
+      display: inline-block;
+
+      margin-left: 0.5rem;
+
+      color: $color-pink;
+
+      font-family: sans-serif;
+      font-size: 2.5rem;
+      font-style: normal;
+
+      transform: rotate(12deg);
+    }
+  }
+
+  &__subtitle {
+    margin: 1.5rem 0 0;
+
+    color: $color-text;
+
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+  }
+
+  // -------------------------
+  // FOTO + MANCHA VERDE
+  // -------------------------
+
+  &__profile {
+    position: relative;
+
+    width: 390px;
+    height: 310px;
+    margin-right: 3rem;
+  }
+
+  // Mancha verde detrás de la foto
+  &__profile-shape {
+    position: absolute;
+      top: 5px;
+    right: 5px;
+    z-index: 1;
+    
+
+    width: 300px;
+    height: 250px;
+
+    border-radius: 56% 44% 61% 39% / 44% 57% 43% 56%;
+
+    background-color: $color-tea-green;
+
+    transform: rotate(-7deg);
+  }
+
+  // Fotografía rectangular
+  &__profile-photo {
+    position: absolute;
+    z-index: 2;
+
+    top: 25px;
+    right: 30px;
+
+    width: 285px;
+    height: 230px;
+
+    padding: 0.7rem;
+
+    background-color: $color-surface;
+
+    box-shadow: 0 8px 20px rgba(23, 23, 23, 0.15);
+
+    transform: rotate(6deg);
+
+    overflow: hidden;
+
+    img {
+      display: block;
+
+      width: 100%;
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+
+  // Si no hay imagen
+  &__profile-placeholder {
+    display: grid;
+    place-items: center;
+
+    width: 100%;
+    height: 100%;
+
+    background-color: $color-peach;
+    color: $color-forest;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 4.5rem;
+    font-style: italic;
+  }
+
+  // -------------------------
+  // CONTADOR
+  // -------------------------
+
+  &__count {
+    position: absolute;
+    z-index: 5;
+
+    bottom: 5px;
+    left: 10px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    width: 88px;
+    height: 88px;
+
+    border-radius: 50%;
+
+    background-color: $color-grape;
+    color: $color-surface;
+
+    transform: rotate(-6deg);
+
+    strong {
+      font-size: 1.6rem;
+      line-height: 1;
+    }
+
+    span {
+      margin-top: 0.25rem;
+
+      font-size: 0.7rem;
+      font-weight: 700;
+
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+  }
+}
+
+// -------------------------
+// TABLET
+// -------------------------
+
+@media (max-width: 900px) {
+  .wardrobe-header {
+    &__topbar {
+      padding-top: 0.5rem;
+    }
+
+    &__hero {
+      min-height: 330px;
+    }
+
+    &__profile {
+      width: 300px;
+      height: 250px;
+      margin-right: 0;
+    }
+
+    &__profile-shape {
+      width: 230px;
+      height: 190px;
+    }
+
+    &__profile-photo {
+      width: 185px;
+      height: 160px;
+    }
+  }
+}
+
+// -------------------------
+// MÓVIL
+// -------------------------
+
+@media (max-width: 600px) {
+  .wardrobe-header {
+    &__brand {
+      display: none;
+    }
+
+    &__topbar {
+      justify-content: flex-end;
+    }
+
+    &__actions {
+      width: 100%;
+    }
+
+    &__search {
+      flex: 1;
+      width: auto;
+    }
+
+    &__add {
+      flex-shrink: 0;
+
+      width: 44px;
+      height: 44px;
+    }
+
+    &__hero {
+      display: block;
+
+      min-height: 430px;
+      margin-top: 2rem;
+    }
+
+    &__greeting {
+      font-size: clamp(3.5rem, 18vw, 5rem);
+    }
+
+    &__title {
+      font-size: clamp(4rem, 20vw, 6rem);
+    }
+
+    &__subtitle {
+      max-width: 220px;
+      margin-top: 1.2rem;
+
+      font-size: 0.7rem;
+    }
+
+    &__profile {
+      position: absolute;
+
+      right: -4rem;
+      bottom: 0;
+
+      width: 280px;
+      height: 230px;
+
+      opacity: 0.95;
+    }
+
+    &__profile-shape {
+      width: 210px;
+      height: 175px;
+    }
+
+    &__profile-photo {
+      width: 170px;
+      height: 145px;
+    }
+
+    &__count {
+      width: 75px;
+      height: 75px;
+
+      strong {
+        font-size: 1.35rem;
+      }
+    }
+  }
+}

@@ -2,7 +2,7 @@ import "./clothing-card.scss";
 
 function ClothingCard({ clothing, onToggleFavorite }) {
   return (
-    <article className="clothing-card">
+    <article className={`clothing-card clothing-card--${clothing.color}`}>
       <div className="clothing-card__image-container">
         <img
           className="clothing-card__image"

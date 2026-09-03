@@ -8,7 +8,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner"],
     formality: 2,
-    image: "/images/white-shirt.jpg",
+    image: "/images/white-shirt.png",
     favorite: false,
   },
 
@@ -21,7 +21,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner", "date", "event", "party"],
     formality: 1,
-    image: "/images/black-basic-top.jpg",
+    image: "/images/black-basic-top.png",
     favorite: false,
   },
 
@@ -34,7 +34,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner", "date", "event", "party"],
     formality: 2,
-    image: "/images/blue-jeans.jpg",
+    image: "/images/blue-jeans.png",
     favorite: false,
   },
 
@@ -47,7 +47,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner", "date", "event", "party"],
     formality: 4,
-    image: "/images/black-tailored-trousers.jpg",
+    image: "/images/black-tailored-trousers.png",
     favorite: false,
   },
 
@@ -60,7 +60,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner", "date", "event"],
     formality: 4,
-    image: "/images/brown-midi-skirt.jpg",
+    image: "/images/brown-midi-skirt.png",
     favorite: false,
   },
 
@@ -73,7 +73,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner", "date", "event", "party"],
     formality: 4,
-    image: "/images/black-dress.jpg",
+    image: "/images/black-dress.png",
     favorite: false,
   },
 
@@ -86,7 +86,7 @@ export const clothes = [
     season: "winter",
     occasion: ["work", "casual", "dinner", "date", "event"],
     formality: 4,
-    image: "/images/beige_blazer.jpg",
+    image: "/images/beige_blazer.png",
     favorite: false,
   },
 
@@ -99,7 +99,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "date"],
     formality: 1,
-    image: "/images/white_sneakers.jpg",
+    image: "/images/white_sneakers.png",
     favorite: false,
   },
 
@@ -112,7 +112,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner", "date", "event", "party"],
     formality: 2,
-    image: "/images/brown_shoulder_bag.jpg",
+    image: "/images/brown_shoulder_bag.png",
     favorite: false,
   },
 ];
