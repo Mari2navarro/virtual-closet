@@ -4,4 +4,50 @@
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
+
+  &--empty {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 250px;
+    padding: 2rem;
+  }
+
+&__empty-message {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.8rem;
+
+  max-width: 360px;
+  margin: 0;
+  padding: 2rem 2.5rem;
+
+  border-radius: 24px;
+
+  background-color: $color-peach;
+  color: $color-forest;
+
+  box-shadow: 0 6px 18px rgba(23, 23, 23, 0.08);
+
+  transform: rotate(-1deg);
+
+  p {
+    margin: 0;
+
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.2rem;
+    font-style: italic;
+    font-weight: 600;
+    line-height: 1.1;
+    text-align: center;
+  }
+}
+
+&__empty-icon {
+  width: 2rem;
+  height: 2rem;
+  stroke-width: 1.6;
+}
 }
