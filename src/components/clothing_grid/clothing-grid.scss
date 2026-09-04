@@ -14,40 +14,60 @@
     padding: 2rem;
   }
 
-&__empty-message {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 0.8rem;
+  &__empty-message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.8rem;
 
-  max-width: 360px;
-  margin: 0;
-  padding: 2rem 2.5rem;
-
-  border-radius: 24px;
-
-  background-color: $color-peach;
-  color: $color-forest;
-
-  box-shadow: 0 6px 18px rgba(23, 23, 23, 0.08);
-
-  transform: rotate(-1deg);
-
-  p {
+    max-width: 360px;
     margin: 0;
+    padding: 2rem 2.5rem;
 
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 1.2rem;
-    font-style: italic;
-    font-weight: 600;
-    line-height: 1.1;
-    text-align: center;
+    border-radius: 24px;
+    background-color: $color-peach;
+    color: $color-forest;
+
+    box-shadow: 0 6px 18px rgba(23, 23, 23, 0.08);
+
+    transform: rotate(-1deg);
+
+    p {
+      margin: 0;
+
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 1.2rem;
+      font-style: italic;
+      font-weight: 600;
+      line-height: 1.1;
+      text-align: center;
+    }
+  }
+
+  &__empty-icon {
+    width: 2rem;
+    height: 2rem;
+    stroke-width: 1.6;
   }
 }
 
-&__empty-icon {
-  width: 2rem;
-  height: 2rem;
-  stroke-width: 1.6;
+@media (max-width: 1100px) {
+  .clothing-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
 }
+
+@media (max-width: 700px) {
+  .clothing-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .clothing-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2rem;
+  }
 }
