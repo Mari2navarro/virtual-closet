@@ -86,7 +86,7 @@ export const clothes = [
     season: "winter",
     occasion: ["work", "casual", "dinner", "date", "event"],
     formality: 4,
-    image: "/images/beige_blazer.png",
+    image: "/images/beige-blazer.png",
     favorite: false,
   },
 
@@ -99,7 +99,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "date"],
     formality: 1,
-    image: "/images/white_sneakers.png",
+    image: "/images/white-sneakers.png",
     favorite: false,
   },
 
@@ -112,7 +112,7 @@ export const clothes = [
     season: "all",
     occasion: ["work", "casual", "dinner", "date", "event", "party"],
     formality: 2,
-    image: "/images/brown_shoulder_bag.png",
+    image: "/images/brown-shoulder-bag.png",
     favorite: false,
   },
 ];

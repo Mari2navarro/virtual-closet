@@ -13,7 +13,11 @@ function ClothingCard({ clothing, onToggleFavorite }) {
       <button
   className="clothing-card__favorite"
   type="button"
-  aria-label={`Añadir ${clothing.name} a favoritos`}
+  aria-label={
+  clothing.favorite
+    ? `Quitar ${clothing.name} de favoritos`
+    : `Añadir ${clothing.name} a favoritos`
+}
   onClick={() => onToggleFavorite(clothing.id)}
 >
   {clothing.favorite ? "♥" : "♡"}
